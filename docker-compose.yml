@@ -1,0 +1,14 @@
+name: pokeindex
+
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - '8080:80'
+
+  backend:
+    build: ./backend
+    ports:
+      - '3000:3000'
+    environment:
+      - BACKEND_API_KEY=SUPER_SECRET_API_KEY_FROM_STRAAL
